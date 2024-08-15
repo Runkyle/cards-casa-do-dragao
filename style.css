@@ -1,0 +1,252 @@
+@font-face {
+    font-family: 'carnivale';
+    src: url('./fontes/Carnevalee\ Freakshow.ttf'),
+    url('./fontes/Carnevalee\ Freakshow.ttf');
+    
+}
+
+.conteudo{
+    font-family:'heart', sans-serif;
+    font-size: 35px;
+    font-weight: 100;
+}
+
+.slide-imagens{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+
+.slide-imagens .slide{
+    opacity: 0;
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    background-image: center;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: 0.3s;
+}
+
+.slide-imagens .mostrar{
+    opacity: 1;
+}
+
+.slide-hotd1{
+    background: url(../imagens-2/imagens-wallpaper-dragao/imagen-hotd1.jpg) ;
+}
+
+.slide-hotd2{
+    background: url(../imagens-2/imagens-wallpaper-dragao/imagen-hotd2.jpg) ;
+}
+
+.slide-hotd3{
+    background: url(../imagens-2/imagens-wallpaper-dragao/imagen-hotd3.jpeg);
+}
+
+.slide-hotd4{
+    background: url(../imagens-2/imagens-wallpaper-dragao/imagen-hotd4.jpg);
+}
+
+
+.seta-voltar, .seta-avancar{
+    position: absolute;
+    z-index: 1;
+}
+
+.seta-voltar{
+    left: 4%;
+    transform: rotateY(180deg);
+}
+
+.seta-avancar{
+    right: 4%;
+}
+
+.seta-voltar .imagem-seta, .seta-avancar .imagem-seta{
+    width: 50px;
+    height: 50px;
+}
+
+.opacidade{
+    opacity: 0.6;
+    cursor: default;
+}
+
+.slide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.slide .conteudo{
+    font-family:'carnivale', sans-serif;
+    width: 920px;
+    height: 420px;
+    background-color: #fff;
+    padding:  20px 40px;
+    border-radius: 10px;
+    display: flex;
+    
+
+
+    
+    
+
+}
+
+.slide .conteudo .conteudo-texto{
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+    
+
+}
+
+.slide .conteudo   img{
+    width: 250px;
+    height: 350px;
+    border-radius: 15px;
+    
+
+    
+    
+
+}
+
+
+
+.slide .conteudo .conteudo-texto .titulo{
+    font-size: 60px;
+    font-weight: 900;
+    
+
+}
+
+.slide .conteudo .conteudo-texto .texto{
+    font-family:'kumbh sans', sans-serif;
+    font-size: 15px;
+    font-weight: 900;
+    line-height: 30px;
+    display: flex;
+    text-align: justify;
+    
+   
+
+    
+}
+
+.slide .conteudo .conteudo-texto .botao{
+    font-size: 35px;
+    color: #BA1D0C;
+    font-weight: 700;
+    align-self: flex-end;
+    
+    
+}
+
+.slide .conteudo .conteudo-texto .verde-2{
+    color: green;
+}
+
+@media(max-width:768px){
+    .slide .conteudo{
+        font-family:'carnivale', sans-serif;
+        width: 520px;
+        height: 420px;
+        background-color: #fff;
+        padding:  20px 40px;
+        border-radius: 10px;
+        display: flex;
+        
+    
+    }
+
+    .slide .conteudo img{
+        width: 150px;
+        height: 300px;
+        align-self: center;
+    }
+
+    .slide .conteudo .conteudo-texto .titulo{
+        font-size: 35px;
+    }
+
+    .slide .conteudo .conteudo-texto .texto{
+        font-size: 12px;
+        line-height: 20px;
+        
+    }
+
+    .slide .conteudo .conteudo-texto .botao{
+        font-size:25px ;
+    }
+
+    
+        
+     
+    
+}
+
+@media(max-width:430px){
+    .slide .conteudo{
+        font-family:'carnivale', sans-serif;
+        width: 320px;
+        height: 420px;
+        background-color: #fff;
+        padding:  20px 40px;
+        border-radius: 10px;
+        display: flex;
+        
+    }
+
+    .slide .conteudo img{
+        width: 100px;
+        height: 250px;
+
+    }
+
+    .slide .conteudo .conteudo-texto .titulo{
+        font-size: 20px;
+    }
+
+    .slide .conteudo .conteudo-texto .texto{
+        font-size: 10px;
+        line-height: 11px;
+    }
+
+    .slide .conteudo .conteudo-texto .botao{
+        font-size: 20px;
+    }
+
+    .seta-voltar .imagem-seta, .seta-avancar .imagem-seta{
+        width: 50px;
+        height: 50px;
+    }
+
+    .seta-voltar{
+        top: 10%;
+        left: 4%;
+        transform: rotateY(180deg);
+        
+    }
+    
+    .seta-avancar{
+        bottom: 10%;
+    }
+
+  
+    
+    
+    
+
+}
