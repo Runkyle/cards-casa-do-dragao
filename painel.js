@@ -1,64 +1,75 @@
-const imagens = document.querySelectorAll(".slide");
+const imagem = document.querySelectorAll(".slide");
 const setaVoltar = document.getElementById("seta-voltar");
 const setaAvancar = document.getElementById("seta-avancar");
 
 let imagemAtual = 0
 
+
 setaAvancar.addEventListener("click", () => {
-if(imagemAtual === imagens.length -1){
-    return
-}
+    if(imagemAtual === imagem.length -1){
+        return
+    }
 
 
 
 
-esconderImagemAtual();
 
 imagemAtual++
-imagens[imagemAtual].classList.add("mostrar")
+
+proximaImagemEsconder();
+        mostrarImagem();
+  sumirOuEsconderSeta();
 
 
+    
 })
 
 setaVoltar.addEventListener("click", () => {
-
     if(imagemAtual === 0){
         return
     }
 
 
 
-    esconderImagemAtual();
+        
+        imagemAtual--
+    
 
-    imagemAtual--
-    imagens[imagemAtual].classList.add("mostrar")
-
-    mostrarOuEsconderSetas();
+        proximaImagemEsconder();
+        mostrarImagem();
+        sumirOuEsconderSeta();
+    
 
 })
 
-function esconderImagemAtual(){
-    const imagemAtual = document.querySelector(".mostrar");
-
-    imagemAtual.classList.remove("mostrar")
+function mostrarImagem() {
+    imagem[imagemAtual].classList.add("mostrar");
 }
 
-function mostrarOuEsconderSetas(){
+function proximaImagemEsconder(){
+    const imagemEsconder = document.querySelector(".mostrar")
+    imagemEsconder.classList.remove("mostrar")
+
+}
+
+function sumirOuEsconderSeta(){
     const naoEhAPrimeiraImagem = imagemAtual !== 0;
     if(naoEhAPrimeiraImagem){
-        setaVoltar.classList.remove('opacidade')
+        setaVoltar.classList.remove("opacidade");
     }
     else{
-        setaVoltar.classList.add('opacidade')
+        setaVoltar.classList.add("opacidade");
 
     }
 
-    const chegouNaUltimaImagem = imagemAtual !== 0 && imagemAtual === imagens.length -1;
+    const chegouNaUltimaImagem = imagemAtual !== 0 && imagemAtual === imagem.length -1
     if(chegouNaUltimaImagem){
-        setaAvancar.classList.add('.opacidade');
+        setaAvancar.classList.add("opacidade");
     }
     else{
-        setaAvancar.classList.remove('.opacidade');
+        setaAvancar.classList.remove("opacidade");
 
     }
+
+
 }
